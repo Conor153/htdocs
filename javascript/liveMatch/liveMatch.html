@@ -1,0 +1,36 @@
+<html>
+<head>
+<script src="liveMatch.js"></script>
+</head>
+<body>
+
+Minute: <input id="minute" type="number" name="minute" step="1" value="1" style="width: 3em"> 
+Shot Outcome:
+<select id="shotoutcome">
+    <option value="Goal">Goal</option>
+	<option value="Point">Point</option>
+	<option value="Wide">Wide</option>
+	<option value="Hitpost">Hit Post</option>
+</select>
+
+<br><br>		
+
+<textarea id="comment" rows="4" cols="50" value=""></textarea>
+<br>
+
+<button id="post">Post</button>
+<br>
+
+Goals=<span id="goal" value="0"> 0 </span>
+Points=<span id="point" value="0"> 0 </span>
+Wides=<span id="wide" value="0"> 0 </span>
+Hit Post=<span id="hitpost" value="0"> 0 </span>
+
+<hr>
+
+<div id="output">
+	
+</div>
+
+</body>	
+</html>
