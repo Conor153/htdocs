@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Document</title>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$("document").ready( function () {
+		
+		$(".code").click(function(){
+			$(this).css("background-color", "#f1f1f1");
+			jQuery.globalEval( $(this).text() );
+		});	
+
+		$("#button").click(function(){
+			location.reload();
+		});			
+			
+	});
+</script>
+<style type="text/css">
+.a { color: Navy; }
+.b { color: Maroon; }
+</style>
+</head>
+<body>
+<h1>LYIT</h1>
+
+<p>Discover exciting third level education opportunities at Letterkenny Institute of Technology.</p>
+<p class="a">We have two thriving campuses in Ireland's North West:  Letterkenny and Killybegs. </p>
+<p class="b">Our Schools of <span id="business">Business</span>, Engineering, Science and Tourism provide a wide variety of programmes, with awards right up to Masters and Doctorate level. </p>
+
+<ul id="ulist">
+	<li>Courses</li>
+	<li>Location</li>
+	<li class="b">Contact</li>
+</ul>
+
+
+<table id="0" border="0">
+<tr>
+	<td>Blah</td>
+</tr>
+</table>
+
+<p></p>
+	
+<hr>
+	<table border=1 id="codeTable">	
+	<tr><td class="code"><pre>$("p:contains(Letterkenny)").css("border", "1px solid red")</pre></td></tr>
+	<tr><td class="code"><pre>$(":contains(Letterkenny)").css("border", "1px solid red")</pre></td></tr>
+	<tr><td class="code">$("p:empty").css("border", "1px solid red")<pre></pre></td></tr>
+	
+	<tr><td><button id="button" type="button">Reset</button></pre></td></tr>
+</table>
+
+
+
+</body>
+</html>

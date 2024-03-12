@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script src="jquery-3.4.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$("document").ready( function () {
+	
+	
+		$(".code").click(function(){
+			$(this).css("background-color", "#f1f1f1");
+			console.log($(this).text());
+			jQuery.globalEval( $(this).text() );
+		});	
+
+		$("#button").click(function(){
+			location.reload();			
+		});	
+
+		// here
+		
+		/* -------------------- Demonstration #1 -------------------- */
+		
+		
+		/*
+		$("p").click(printAlert);
+		
+		function printAlert(evt)  // evt is the EventObject
+		{
+			alert("clicked a paragraph");			
+		}
+		*/
+		
+		// OR use an anonymous function		
+		
+		/*
+		$("p").click(function(){
+			alert("clicked a paragraph");
+			//alert($(this).text());
+		});		
+		*/
+				
+		/*
+		$(".a").dblclick(function(){       // double click!!	
+			//alert("clicked a paragraph");
+			alert($(this).text());
+		});
+		*/
+		/*
+		$("#ulist").click(function(){			
+			alert($(this).html());
+		});
+		*/
+		
+		/*
+		$("img").mouseover(function(){			
+			$(this).attr({src:"twitter2.png"})
+		});
+		$("img").mouseout(function(){			
+			$(this).attr({src:"twitter.png"})
+		});
+		*/
+		
+		/*
+		$("img").hover(
+		function(){			
+			$(this).attr({src:"twitter2.png"})
+		}
+		,
+		function(){			
+			$(this).attr({src:"twitter.png"})
+		}
+		);
+		*/
+
+		/* -------------------- Demonstration #2 -------------------- */
+		
+		
+		
+		/*
+		$("p").click(printAlert);
+				
+		function printAlert(evt)  // evt is the EventObject
+		{
+			$("#para").text("type="+evt.type+"; target="+evt.target+"; x="+evt.pageX+"; y="+evt.pageY);
+			
+		}
+		*/
+		// Note::::::   $(this) is the evt.target property
+		
+
+	});
+	</script>
+</head>
+
+
+<body>
+<h1>LYIT</h1>
+
+<p>Discover exciting third level education opportunities at <i>Letterkenny Institute of Technology</i>.</p>
+<p class="a">We have two thriving campuses in Ireland's North West:  Letterkenny and Killybegs. </p>
+<p class="b">Our Schools of Business, Engineering, <span>Science</span> and Tourism provide a wide variety of programmes, with awards right up to Masters and Doctorate level. </p>
+
+<ul id="ulist">
+	<li class="a">Courses</li>
+	<li class="b">Location</li>
+	<li class="b">Contact</li>
+</ul>
+
+
+<img src="twitter.png" />
+
+<p id="para"></p>
+
+<hr>
+
+
+
+<table border=1 id="codeTable">
+<tr>
+<td class="code">
+<pre>
+$("img").mouseover(function(){			
+  $(this).attr({src:"twitter2.png"})
+});
+
+$("img").mouseout(function(){			
+  $(this).attr({src:"twitter.png"})
+});
+</pre></td>
+<td class="code">
+<pre>
+$("img").unbind();
+</pre></td>
+</tr>
+
+<tr>
+<td class="code">
+<pre>
+$("img").hover(
+function(){			
+  $(this).attr({src:"twitter2.png"})
+}
+,
+function(){			
+  $(this).attr({src:"twitter.png"})
+}
+);
+</pre></td>
+<td class="code">
+<pre>
+$("img").unbind();
+</pre></td>
+</tr>
+
+<tr>
+<td>
+<a href="Events4.html">more...</a>
+</td>
+<td class="code">
+<pre>
+
+</pre></td>
+</tr>
+		
+	<tr><td><button id="button" type="button">Reset</button></pre></td></tr>
+</table>
+
+
+</body>
+</html>

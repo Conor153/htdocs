@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Document</title>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$("document").ready( function () {
+		
+		$(".code").click(function(){
+			$(this).css("background-color", "#f1f1f1");
+			jQuery.globalEval( $(this).text() );
+		});	
+
+		$("#button").click(function(){
+			location.reload();
+		});			
+			
+	});
+</script>
+<style type="text/css">
+.a { color: Navy; }
+.b { color: Maroon; }
+</style>
+</head>
+<body>
+	<ul id="list1">
+		<li class="a">item 1</li>
+		<li class="a">item 2</li>
+		<li class="b">item 3</li>
+		<li class="b">item 4</li>
+	</ul>
+<p class="a">This is paragraph 1</p>
+<p id="para1">This is paragraph 2</p>
+<p class="b">This is paragraph 3</p>
+<p>This is paragraph 4</p>
+
+<hr>
+
+<hr>
+	<table border=1 id="codeTable">
+	<tr><td class="code"><pre>$("p:first").css("border", "3px solid red")</pre></td></tr>
+	<tr><td class="code"><pre>$("p:last").css("border", "3px solid red")</pre></td></tr>
+	<tr><td class="code"><pre>$("p:even").css("border", "3px solid red")</pre></td></tr>
+	<tr><td class="code"><pre>$("p:odd").css("border", "3px solid red")</pre></td></tr>
+	<tr><td class="code"><pre>$(".a:first").css("border", "3px solid red")</pre></td></tr>
+	<tr><td class="code"><pre>$(".b:even").css("border", "3px solid red")</pre></td></tr>
+	<tr><td class="code"><pre>$("p:gt(1)").css("border","3px solid red")</pre></td></tr>
+	<tr><td class="code"><pre>$("p:not(p:eq(2))").css("border", "3px solid red")</pre></td></tr>
+	<tr><td><button id="button" type="button">Reset</button></pre></td></tr>
+</table>
+
+
+
+</body>
+</html>
