@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "hTeam":"Liverpool",
+      "hTeamScore":"5",
+      "aTeamScore":"0",
+      "aTeam":"Manchesta Yanited"
+    },
+    {
+      "hTeam":"Celtic",
+      "hTeamScore":"10",
+      "aTeamScore":"0",
+      "aTeam":"Some scottish pub team"
+    }
+  ]
+}
