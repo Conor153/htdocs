@@ -15,10 +15,13 @@ function getJsonData(link) {
 		dataType: `json`,       
 		success: successFunc,
 	});
+
 	//Print the data into the table
 	function successFunc(data) 
     {	
-        $(`#jsonOutput`).text(data)
+        $(`#jsonOutput`).val(JSON.stringify(data,null,3));
+		console.log(data);
+		console.log(data.value);
 	};
 
 } 
