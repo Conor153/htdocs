@@ -16,7 +16,7 @@ function getData() {
 
 	function successFunc(data) {
 	  $.each(data.teams, function(index, team) {
-        $(`#tbody`).append(`<tr><td><img width:20px; height:auto; src=logos/${team.name}.png></img> ${team.name} (${team.name.substring(0,3).toUpperCase()})</td>
+        $(`#tbody`).append(`<tr><td><img src=logos/${team.name}.png></img> ${team.name} (${team.name.substring(0,3).toUpperCase()})</td>
 		<td><a href=https://en.wikipedia.org/wiki/${team.name}_GAA>Info...</a></td></tr>`);
       });
 	}
