@@ -1,6 +1,7 @@
 var currentRound = 1;
 $(`document`).ready(function() {
     nav();
+    footer();
     getResults(currentRound);
 
 

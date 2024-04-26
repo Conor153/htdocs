@@ -1,5 +1,6 @@
 $(`document`).ready(function() {
     nav();
+	footer();
 	getSelectData();  //Function to get the teams in the dropdown box
     //If the dropdown box changes get the data with the same team ID
 	getPlayerData(0);  //Function to display player
@@ -13,7 +14,7 @@ $(`document`).ready(function() {
 		//Print out the table with the data collected
 		$.each(data.players, function(index, player) {
             $(`#tbody`).append(`<tr>
-                <td>${player.teamname}</td>
+                <td><img src=logos/${player.teamname}.png></img>${player.teamname}</td>
                 <td>${player.name} (${player.squadNumber})</td>
                 <td>${player.age}</td>
                 <td>${player.matches}</td></tr>`);
@@ -32,7 +33,7 @@ function getPlayerData(teamId) {
 	//Print out the table with the data collected
 	$.each(data.players, function(index, player) {
 		$(`#tbody`).append(`<tr>
-			<td>${player.teamname}</td>
+			<td><img src=logos/${player.teamname}.png></img>${player.teamname}</td>
 			<td>${player.name} (${player.squadNumber})</td>
 			<td>${player.age}</td>
 			<td>${player.matches}</td></tr>`);
@@ -64,7 +65,7 @@ function getPlayerData(teamId) {
 
 function getSelectData() {
     //Get the teams from the getTeams.php
-	$.ajax({
+		$.ajax({
 		url: `http://localhost/a2/ajax/getTeams.php`,
 		cache: false,
 		type: `GET`,

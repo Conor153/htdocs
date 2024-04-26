@@ -1,7 +1,7 @@
 $(`document`).ready(function() {
     nav();
+	footer();
     $(".getButton").click(function(e){
-		// alert(e.target.value);
 		let link = e.target.value;
         getJsonData(link);
 	  });
@@ -20,8 +20,6 @@ function getJsonData(link) {
 	function successFunc(data) 
     {	
         $(`#jsonOutput`).val(JSON.stringify(data,null,3));
-		console.log(data);
-		console.log(data.value);
 	};
 
 } 

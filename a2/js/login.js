@@ -1,17 +1,23 @@
 $(`document`).ready(function() {
 	nav();
-    getData();
+    footer();
+    $("#next").click(function()
+    {
+        GetLoginData();
+    });
+
+
 });
 
-function getData() {
-var email
-var password
 
-.click //Login button
+function GetLoginData() {
+var email;
+var password;
+var login = false;
 
-$.post(checkLogin.php, {email,password}, function(data){
+    $.post(checkLogin.php, {email,password}, function(data){
 
-
+        sessionStorage.setItem(login, true);
 
 
 

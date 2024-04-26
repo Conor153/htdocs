@@ -16,14 +16,28 @@ function nav()
     </li>
     <li class="nav-item">
     <a class="nav-link text-secondary" href ="tables.html">Tables</a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link text-secondary" href ="tables.html">Login</a>
-    </li>
-    </ul>`;
-    nav.innerHTML  = nav.innerHTML + navOutPut;
+    </li>`;
+    // if(sessionStorage.getItem(login))
+    // {
+    //     navOutPut += `
+    //     <li class="nav-item">
+    //     <a class="nav-link text-secondary" href ="admin.html">Admin</a>
+    //     </li>
+    //     <li class="nav-item">
+    //     <a class="nav-link text-secondary" href ="logout.html">Logout</a>
+    //     </li>`;
+    // }
 
-
+    // else
+    // {
+        // navOutPut += `<li class="nav-item">
+        // <a class="nav-link text-secondary" href ="login.html">Login</a>
+        // </li>`;
+    // }
+    navOutPut += `<li class="nav-item">
+        <a class="nav-link text-secondary" href ="login.html">Login</a>
+        </li>`;
+    navOutPut += `</ul>`;
     $("nav").html(navOutPut);
 }
 

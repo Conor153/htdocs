@@ -8,9 +8,9 @@ mysqli_select_db($connection,"gaanfl2024");
 mysqli_query($connection,"SET NAMES utf8");
 
 if($ID==0)
-    $result = mysqli_query($connection,"SELECT players.name,players.squadNumber, players.age, players.matches, teams.name AS teamname FROM players,teams WHERE players.teamID = teams.id ORDER BY players.name, squadNumber"); 
+    $result = mysqli_query($connection,"SELECT players.name, players.squadNumber, players.age, players.matches, teams.name AS teamname FROM players,teams WHERE players.teamID = teams.id ORDER BY teamname, players.name, squadNumber"); 
 else
-    $result = mysqli_query($connection,"SELECT players.name,players.squadNumber, players.age, players.matches, teams.name AS teamname FROM players,teams WHERE teamID=$ID ORDER BY players.name"); 
+    $result = mysqli_query($connection,"SELECT players.name, players.squadNumber, players.age, players.matches, teams.name AS teamname FROM players, teams WHERE players.teamID=$ID && players.teamID = teams.id ORDER BY teamname, players.name"); 
 
 $rs = array();
 while($rs[] = mysqli_fetch_assoc($result)) {
