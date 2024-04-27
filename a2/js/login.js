@@ -1,28 +1,20 @@
-$(`document`).ready(function() {
-	nav();
+$(`document`).ready(function () {
+    nav();
     footer();
-    $("#next").click(function()
-    {
-        GetLoginData();
+    $("#login").click(function () {
+        var email = $("#email").val();
+        var password = $("#password").val();
+        console.log(email);//thomas.devine@atu.ie
+        console.log(password);//letmein
+        $.post("http://localhost/a2/ajax/checkLogin.php", { "email": email, "password": password }, function (data) {
+            console.log(data.login);
+            if (data.login.length == 0) {
+                //alert("Invalid login: try again");
+            }
+            else {
+                sessionStorage.setItem("login", "true");
+                location.replace("http://localhost/a2/admin.html");
+            }
+        }, "json");
     });
-
-
 });
-
-
-function GetLoginData() {
-var email;
-var password;
-var login = false;
-
-    $.post(checkLogin.php, {email,password}, function(data){
-
-        sessionStorage.setItem(login, true);
-
-
-
-}
-)
-
-
-}

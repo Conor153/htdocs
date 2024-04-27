@@ -1,10 +1,10 @@
-$(`document`).ready(function() {
-    nav();
+$(`document`).ready(function () {
+	nav();
 	footer();
-    $(".getButton").click(function(e){
+	$(".getButton").click(function (e) {
 		let link = e.target.value;
-        getJsonData(link);
-	  });
+		getJsonData(link);
+	});
 });
 
 function getJsonData(link) {
@@ -12,14 +12,13 @@ function getJsonData(link) {
 		url: `http://localhost/a2/${link}`,
 		cache: false,
 		type: `GET`,
-		dataType: `json`,       
+		dataType: `json`,
 		success: successFunc,
 	});
 
 	//Print the data into the table
-	function successFunc(data) 
-    {	
-        $(`#jsonOutput`).val(JSON.stringify(data,null,3));
+	function successFunc(data) {
+		$(`#jsonOutput`).val(JSON.stringify(data, null, 3));
 	};
 
 } 

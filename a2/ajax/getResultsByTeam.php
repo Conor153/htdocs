@@ -6,7 +6,7 @@ $connection = mysqli_connect("localhost","root","");
 mysqli_select_db($connection,"gaanfl2024");
 mysqli_query($connection,"SET NAMES utf8");
 
-$result = mysqli_query($connection,"SELECT * FROM results WHERE team=$team"); 
+$result = mysqli_query($connection,"SELECT DISTINCT * FROM results WHERE team1ID=$team OR team2ID=$team"); 
 
 $rs = array();
 while($rs[] = mysqli_fetch_assoc($result)) {
