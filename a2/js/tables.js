@@ -25,7 +25,6 @@ function getDivision1Teams() {
     });
     function successFunc(data) {
         $.each(data.results, function (index, results) {
-            console.log(results);
             getTableData(results.team1ID);
         });
     };
@@ -52,13 +51,11 @@ function getTableData(teamID) {
                 gamePointsAgainst = 0;
                 played++;
                 if (results.team1ID == teamID) {
-                    //console.log("Home");
                     teamName = results.team1;
                     gamePointsFor = CalculateMatchPoints(results.team1Goals, results.team1Points)
                     gamePointsAgainst = CalculateMatchPoints(results.team2Goals, results.team2Points)
                 }
                 else if (results.team2ID == teamID) {
-                    //console.log("Away");
                     teamName = results.team2;
                     gamePointsFor = CalculateMatchPoints(results.team2Goals, results.team2Points)
                     gamePointsAgainst = CalculateMatchPoints(results.team1Goals, results.team1Points)
@@ -118,7 +115,7 @@ function getTableData(teamID) {
         $.each(teams, function (index, team) {
             $(`#tbody`).append(`<tr>
                 <td>${index + 1}</td>
-                <td><img src=logos/${team.teamName}.png></img>${team.teamName}</td>
+                <td>${team.teamName}</td>
                 <td>${team.played}</td>
                 <td>${team.wins}</td>
                 <td>${team.draws}</td>

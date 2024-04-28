@@ -4,10 +4,7 @@ $(`document`).ready(function () {
     $("#login").click(function () {
         var email = $("#email").val();
         var password = $("#password").val();
-        console.log(email);//thomas.devine@atu.ie
-        console.log(password);//letmein
         $.post("http://localhost/a2/ajax/checkLogin.php", { "email": email, "password": password }, function (data) {
-            console.log(data.login);
             if (data.login.length == 0) {
                 //alert("Invalid login: try again");
             }

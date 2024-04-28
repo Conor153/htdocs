@@ -18,28 +18,29 @@
 
         <button id="previous" type="button" class="getButton btn btn-primary" value="-1">
             < < Round 7</button>
-                <label id="currentRound" class="form-label">Round 1</label>
+                <label for="next" id="currentRound" class="form-label">Round 1</label>
                 <button id="next" type="button" class="getButton btn btn-primary" value="1">Round > > 2</button>
                 <hr>
-                <form action="">
+                <form>
                     <div class="form-group row">
-                        <label class="col-form-label col-1" for="name">Team:</label>
-                        <input class="form-control col-" type="text" name="name" id="name"></input>
+                        <label for="name" class="col-form-label col-1">Team:</label>
+                        <div class="col">
+                            <input id="name" name="name" class="form-control col" type="text"
+                                autocomplete="name"></input>
+                        </div>
                     </div>
                 </form>
-
                 <hr>
                 <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Round</th>
-                            <th>Team1</th>
-                            <th></th>
-                            <th></th>
-                            <th>Team2</th>
-                            <th>Division & Round</th>
-                        </tr>
+                    <tr>
+                        <th>Date</th>
+                        <th>Round</th>
+                        <th>Team1</th>
+                        <th></th>
+                        <th></th>
+                        <th>Team2</th>
+                        <th>Division & Round</th>
+                    </tr>
                     </thead>
                     <tbody id="tbody">
                     </tbody>

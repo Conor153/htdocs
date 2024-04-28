@@ -3,8 +3,8 @@ $(`document`).ready(function () {
     nav();
     footer();
     getResults(currentRound);
-
-
+    
+    $("#next").val()
     $("#next").click(function () {
         Change($("#next").val());
     });
@@ -15,8 +15,6 @@ $(`document`).ready(function () {
     $("#name").keyup(function () {
         Filter($("#name").val());
     });
-
-
 });
 
 function getResults(currentRound) {
@@ -61,7 +59,7 @@ function Change(value) {
     if (currentRound == 1)
         $("#previous").text(`< < Round 7`);
 
-    $("#currentRound").text(` Round ${currentRound} `);
+    $("#currentRound").text(`Round ${currentRound}`);
     getResults(currentRound);
 }
 
@@ -71,8 +69,6 @@ function Filter(value) {
             console.log(`${result.team1}, ${result.team2} `);
             return result.team1.includes(value) || result.team2.includes(value);
         });
-        console.log(teams);
-
         $("#tbody").empty();
         $.each(teams, function (index, result) {
             $(`#tbody`).append(`<tr><td>${result.date}</td>
