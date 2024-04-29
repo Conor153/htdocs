@@ -1,7 +1,5 @@
-$(`document`).ready(function () {
-	nav();
-	footer();
-	getData();
+$(`document`).ready(function() {
+    getData();
 });
 
 function getData() {
@@ -16,13 +14,13 @@ function getData() {
 	});
 
 	function successFunc(data) {
-		$.each(data.teams, function (index, team) {
-			$(`#tbody`).append(`<tr><td><img src=logos/${team.name}.png></img> ${team.name} (${team.name.substring(0, 3).toUpperCase()})</td>
-		<td><a href=https://en.wikipedia.org/wiki/${team.name}_GAA>Info...</a></td></tr>`);
-		});
+	  $.each(data.teams, function(index, team) {
+        $(`#tbody`).append(`<tr><td><img src=logos/${team.ID}.webp></img></td>
+		<td>`+team.name+`</td></tr>`);
+      });
 	}
 
-	function errorFunc(xhr, status, strError) {
+	function errorFunc(xhr,status,strError) {
 		$(`#myDiv`).text(`There was an error!`);
 	}
 }

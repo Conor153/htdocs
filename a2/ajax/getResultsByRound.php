@@ -1,6 +1,6 @@
 <?php
 
-$round=$_GET['round'];
+$round=$_POST['round'];
 
 $connection = mysqli_connect("localhost","root","");
 mysqli_select_db($connection,"gaanfl2024");
