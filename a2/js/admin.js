@@ -26,8 +26,10 @@ function getResults(currentRound) {
             <td>${results.round}</td>
             <td><img src=logos/${results.team1}.png></img> ${results.team1}</td>
             <td><input id="team1Goals${results.id}" class="form-control" type="text" value="${results.team1Goals}"></input></td>
+            <td>-</td>
             <td><input id="team1Points${results.id}" class="form-control" type="text" value="${results.team1Points}"></input></td>
             <td><input id="team2Goals${results.id}" class="form-control" type="text" value="${results.team2Goals}"></input></td>
+            <td>-</td>
             <td><input id="team2Points${results.id}" class="form-control" type="text" value="${results.team2Points}"></input></td>
             <td><img src=logos/${results.team2}.png></img> ${results.team2}</td>
             <td>D${results.division} Rd${results.round}</td>
@@ -60,8 +62,8 @@ function getResults(currentRound) {
                 {
                     "ID": ID,
                 });
+            $("#tbody").empty();
             getResults(currentRound);
-
         });
     };
 }
