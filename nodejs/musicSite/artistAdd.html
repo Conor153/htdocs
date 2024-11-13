@@ -7,20 +7,26 @@
 </head>
 
 <body>
-<a href='artists.html'>Artists</a> | <a href='albums.html'>Albums</a> | <a href='albumFilter.html'>Album Filter</a> | <a href='artistAdd.html'>Add Artist</a>
+    <a href='artists.html'>Artists</a> | <a href='albums.html'>Albums</a> | <a href='albumFilter.html'>Album Filter</a> | <a href='artistAdd.html'>Add Artist</a> | <a href='artistUpdate.html'>Update Artist</a>
 <h1>Add Artist</h1>
 
 <hr>
-<label>Artist ID:</label>
-<input id='artists_id'></input>
-<br>
-<br>
-<label>Artist Name:</label>
-<input id='artists_name'></input>
-<br>
-<button>Add</button>
 
-<div id='myDiv'></div>
-
+<div id='myDiv'>
+    <table class="table">
+            <tr>
+                <td>Artist ID:</td>
+                <td><input type="text" name="artist_id" id="artist_id" placeholder=""></input></td>
+            </tr>
+            <tr>
+                <td>Artist Name:</td>
+                <td><input type="text" name="artist_name" id="artist_name" placeholder=""></input></td>
+            </tr> 
+            <tr>
+                <td></td>
+                <td><button id="add" type="button" value="1">Add</button></td>
+            </tr> 
+    </table>
+</div>
 </body>
 </html>

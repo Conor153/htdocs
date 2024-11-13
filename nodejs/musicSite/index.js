@@ -25,6 +25,7 @@ var myServer = http.createServer(function(request, response) {
     var page=q.query.page;
     var query;
     var artist_id = q.query.artist_id;
+    var artist_name= q.query.artist_name;
     switch(page)
     {
         // http://localhost:3000/?page=artist
@@ -41,13 +42,15 @@ var myServer = http.createServer(function(request, response) {
         JOIN artist ON artist.artist_id = album.artist_id
         WHERE album.artist_id=${artist_id};`;                   // ...
                             break;
+
+        case "artistAdd": query=`INSERT INTO artist values (${artist_id}, "${artist_name}")`;               // ...
+                            break;   
+                            
+        case "artistUpdate": query=`Update artist SET artist_name = "${artist_name}" Where artist_id = "${artist_id}"`;               // ...
+                            break;                   
         
         default: query="SHOW TABLES";
                         break;
-//SELECT DISTINCT artist.artist_id, artist.artist_name
-// FROM artist
-// JOIN album ON artist.artist_id = album.artist_id
-// WHERE album.artist_id=${artist_id};
     }    
     connection.query(query, function(err, rows) {
         if (err) throw err;

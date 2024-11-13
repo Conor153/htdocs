@@ -62,7 +62,7 @@ function getResults(currentRound) {
                 {
                     "ID": ID,
                 });
-            $("#tbody").empty();
+            alert("Match Record Deleted");
             getResults(currentRound);
         });
     };
