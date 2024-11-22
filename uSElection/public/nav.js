@@ -1,38 +1,42 @@
 function nav() {
     var navOutPut = `
+    <img src="usElection/images/2024.png">|
     <ul class="navbar-nav">
     <li class="nav-item">
-    <a class="nav-link text-secondary" href ="routes.html">Routes</a>
-    </li>
+    <img src="images/2024.png">|
+    </li> |
     <li class="nav-item">
-    <a class="nav-link text-secondary" href ="states.html">States</a>
-    </li>
+    <a href ="routes.html">Routes</a>
+    </li> |
     <li class="nav-item">
-    <a class="nav-link text-secondary" href ="candidates.html">Candidates</a>
-    </li>
+    <a href ="states.html">States</a>
+    </li> |
     <li class="nav-item">
-    <a class="nav-link text-secondary" href ="results2024.html">Results 2024</a>
-    </li>
+    <a href ="candidates.html">Candidates</a>
+    </li> |
     <li class="nav-item">
-    <a class="nav-link text-secondary" href ="resultsEV2024.html">EV Results 2024</a>
-    </li>
+    <a href ="results2024.html">Results 2024</a>
+    </li> | 
     <li class="nav-item">
-    <a class="nav-link text-secondary" href ="resultsMap.html">Results Map</a>
-    </li>`;
+    <a href ="resultsEV2024.html">EV Results 2024</a>
+    </li> | 
+    <li class="nav-item">
+    <a href ="usMap.html">Results Map </a>
+    </li> |`;
     if (sessionStorage.getItem("login") == "true") {
         navOutPut += `
         <li class="nav-item">
-        <a class="nav-link text-secondary" href ="admin.html">Admin</a>
+        <a class="nav-link" href ="admin.html">Admin</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link text-secondary" href ="logout.html">Logout</a>
+        <a class="nav-link" href ="logout.html">Logout</a>
         </li>`;
     }
 
     else {
         navOutPut += `<li class="nav-item">
-        <a class="nav-link text-secondary" href ="login.html">Login</a>
-        </li>`;
+        <a href ="login.html">Login</a>|   
+        </li> `;
     }
     navOutPut += `</ul>`;
     $("nav").html(navOutPut);

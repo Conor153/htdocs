@@ -3,22 +3,16 @@ $(`document`).ready(function () {
 	footer();
 	$(".getButton").click(function (e) {
 		let link = e.target.value;
+		console.log(link);
 		getJsonData(link);
 	});
 });
 
 function getJsonData(link) {
-	$.ajax({
-		url: `http://localhost/model/${link}`,
-		cache: false,
-		type: `GET`,
-		dataType: `json`,
-		success: successFunc,
-	});
-
-	//Print the data into the table
-	function successFunc(data) {
+	$.getJSON(`http://localhost:3000${link}/`, function(data){
+		console.log(data);
 		$(`#jsonOutput`).val(JSON.stringify(data, null, 3));
-	};
+
+	});	
 
 } 
