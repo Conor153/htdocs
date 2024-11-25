@@ -1,9 +1,9 @@
 function nav() {
     var navOutPut = `
-    <img src="usElection/images/2024.png">|
+    <img src="usElection/images/2024.png">
     <ul class="navbar-nav">
     <li class="nav-item">
-    <img src="images/2024.png">|
+    <img src="images/2024.png">
     </li> |
     <li class="nav-item">
     <a href ="routes.html">Routes</a>
@@ -27,16 +27,16 @@ function nav() {
         navOutPut += `
         <li class="nav-item">
         <a class="nav-link" href ="admin.html">Admin</a>
-        </li>
+        </li> | 
         <li class="nav-item">
         <a class="nav-link" href ="logout.html">Logout</a>
-        </li>`;
+        </li> | `;
     }
 
     else {
         navOutPut += `<li class="nav-item">
-        <a href ="login.html">Login</a>|   
-        </li> `;
+        <a href ="login.html">Login</a>   
+        </li> |`;
     }
     navOutPut += `</ul>`;
     $("nav").html(navOutPut);

@@ -53,6 +53,8 @@ app.get("/footer", function(req,res){
 app.get("/results/:year?", function(req,res){
 	resultData.getResults(req,res);
 });
+
+
 // var year = req.params.year;
 //resultData.getResults(req,res);
 // var filteredResults = _.filter(resultData.results, function(result)
