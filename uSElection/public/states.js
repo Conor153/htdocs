@@ -7,9 +7,9 @@ $(`document`).ready(function () {
     {
         $("#tbody").empty();
         states.sort(function(a,b){
-            if(a.ev>b.ev || a.names>b.names)
+            if(a.ev<b.ev)
                 return 1;
-            else if(a.ev<b.ev || b.names>a.names)
+            else if(b.ev<a.ev)
                 return -1;
             else 
                 return 0;
@@ -21,7 +21,14 @@ $(`document`).ready(function () {
     $("#name").click(function ()
     {
         $("#tbody").empty();
-        states.sort();
+        states.sort(function(a,b){
+            if(a.name>b.name)
+                return 1;
+            else if(b.name>a.name)
+                return -1;
+            else 
+                return 0;
+        });
         DisplayData(states);
     });
 
@@ -30,17 +37,13 @@ $(`document`).ready(function () {
 function getJsonData() {
 	$.getJSON("http://localhost:3000/states/", function(data){
 		states = data;
-        console.log(data);
-        console.log(states);
         DisplayData(data);	
 
 	});	
-
+} 
 function DisplayData(states)
 {
     $.each(states, function(i, value){
-        //$("#tbody").empty();
-
         $("#tbody").append(
             `<tr>
             <td>${value.name}</td>
@@ -51,5 +54,3 @@ function DisplayData(states)
             `);
     });
 }
-
-} 

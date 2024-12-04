@@ -16,12 +16,12 @@ connection.connect(function(err){
 exports.getResults = function(req,res){
 
 	var year = req.params.year;
-	connection.query(`SELECT * FROM pres_votes WHERE year = ${year}`, function(err, rows, fields) {
+	connection.query(`SELECT * FROM pres_votes WHERE year = ${year} order by state_name, candidate_name`, function(err, rows, fields) {
 	  if (err) throw err;
 	
-	  console.log(rows);
 	  res.send(JSON.stringify(rows));
 	  
 	});
 	
 }
+

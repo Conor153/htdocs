@@ -41,6 +41,10 @@ app.get("/users", function(req,res){
 	users.getUsers(req,res);
 });
 
+app.get("/login/:email?/:password?", function(req,res){
+	users.checkLogin(req,res);
+});
+
 app.get("/nav", function(req,res){
 	res.send(navData);
 });
@@ -49,20 +53,9 @@ app.get("/footer", function(req,res){
 	res.send(footerData);
 });
 
-
 app.get("/results/:year?", function(req,res){
 	resultData.getResults(req,res);
 });
-
-
-// var year = req.params.year;
-//resultData.getResults(req,res);
-// var filteredResults = _.filter(resultData.results, function(result)
-  // {
-// 	return result.year == year;
-  // });
-  // res.send(filteredResults);
-
 
 var myServer = app.listen(3000, function() {
   console.log("Server listening on port 3000");

@@ -15,7 +15,7 @@ connection.connect(function(err){
 
 exports.getCandidates = function(req,res){
 
-	connection.query("SELECT DISTINCT candidate_name FROM pres_votes", function(err, rows, fields) {
+	connection.query("SELECT DISTINCT candidate_name, candidate_party FROM pres_votes ORDER by candidate_name", function(err, rows, fields) {
 	  if (err) throw err;
 
 	  res.send(JSON.stringify(rows));
