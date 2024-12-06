@@ -6,6 +6,7 @@
     <script src="resultsEV2024.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -13,9 +14,34 @@
         <nav id="nav" class="navbar navbar-expand-sm"></nav>
         <hr>
     <h1>Election 2024 by Electoral Votes</h1>
-    <table class="table table-bordered"> 
+    <hr>
+    <table id="table1" class="table table-bordered"> 
+        <tr>
+        <th>Candidate</th>
+        <td></td>
+        </tr>
+        <tr>
+        <th>Electoral Votes</th>
+        <td></td>
+        </tr>
+        <tr>
+        <th>Votes</th>
+        <td></td>
+        </tr>
     </table>
-    <table class="table table-bordered"> 
+    <hr>
+    <h2>Vote Detail</h2>
+    <table id="table2" class="table table-bordered"> 
+        <thead>
+            <tr>
+                <th>State</th>            
+                <th>EV</th>
+                <th>Winning Candidate</th>
+            </tr>
+        </thead>
+
+        <tbody id="tbody">        
+        </tbody>
     </table>
     <footer id="footer" class="footer d-flex justify-content-center"></footer>
     </div>

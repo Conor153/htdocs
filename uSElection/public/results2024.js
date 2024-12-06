@@ -25,7 +25,7 @@ function getJsonData() {
             else
             {
                 tableOutput += `<tr>
-                    <td style="background-color:#1565C0">(${data[i+1].candidate_party.charAt(0)})`
+                    <td style="background-color:#0a53e4">(${data[i+1].candidate_party.charAt(0)})`
                         
                     
             }

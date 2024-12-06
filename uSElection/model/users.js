@@ -25,16 +25,20 @@ exports.getUsers = function(req,res){
 }
 
 exports.checkLogin = function(req,res){
-
 	var email = req.params.email;
 	var password = req.params.password;
-	connection.query(`SELECT * FROM users WHERE email = "${email}" && password = "${password}"`, function(err, rows, fields) {
+	connection.query(`SELECT * FROM users WHERE email = "${email}" AND password = "${password}"`, function(err, rows, fields) {
 	  if (err) throw err;
 	
-	if(rows.length == 0)
+	if(rows.length == null)
+	{
 		res.send("Invalid Credentials");
+	}
+		
 	else
-	  res.send(JSON.stringify(rows));
+	{
+		res.send(JSON.stringify(rows));
+	}
 	  
 	});
 	

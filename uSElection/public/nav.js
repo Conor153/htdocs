@@ -23,10 +23,10 @@ function nav() {
     if (sessionStorage.getItem("login") == "true") {
         navOutPut += `
         <li class="nav-item">
-        <a class="nav-link" href ="admin.html">Admin</a>
+        <a href ="admin.html">Admin</a>
         </li> |
         <li class="nav-item">
-        <a class="nav-link" href ="logout.html">Logout</a>
+        <a href ="logout.html">Logout</a>
         </li> |`;
     }
 

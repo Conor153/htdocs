@@ -25,3 +25,19 @@ exports.getResults = function(req,res){
 	
 }
 
+
+exports.UpdateResults = function(req,res){
+
+	var abbrv= req.params.abbrv;
+	var votes = req.params.votes;
+	var votes = req.params.year;
+
+	connection.query(`SELECT * FROM pres_votes WHERE year = ${year} order by state_name, candidate_name`, function(err, rows, fields) {
+	  if (err) throw err;
+	
+	  res.send(JSON.stringify(rows));
+	  
+	});
+	
+}
+

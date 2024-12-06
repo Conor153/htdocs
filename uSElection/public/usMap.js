@@ -26,7 +26,7 @@ function getJsonData(year) {
             }
             else
             {
-                $(`#${data[i].state_abbr}`).attr("fill", "#1565C0")
+                $(`#${data[i].state_abbr}`).attr("fill", "#0a53e4")
             }
             $("#tbody").append(
                 `
