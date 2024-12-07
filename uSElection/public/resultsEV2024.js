@@ -12,34 +12,77 @@ function getResultData() {
         var votesKH=0;
         var evDT=0;
         var evKH=0;
-        var percentDT;
-        var percentKH;
+        var tableOutput=``;
+
+
         console.log(states);
 
-        for(var j=0;j<data.length;j=j+2)
+        for(var j=0;j<states.length;j++)
         {
-            votesDT += data[j].votes;
-            votesKH += data[j+1].votes;
-            // if(data[j].votes> data[j+1].votes)
-            //     evDT += states[j].ev
-            // else
-            //     evKH += states[j].ev
+            votesDT += data[j*2].votes;
+            votesKH += data[j*2+1].votes;
+            if(data[j*2].votes> data[j*2+1].votes)
+                evDT += states[j].ev
+            else
+                evKH += states[j].ev
         }
-        totalVotes = votesDT + votesKH;
-        $("#table1 td:eq(0)").append(`${data[0].candidate_name}    ${data[1].candidate_name}`);
-        $("#table1 td:eq(1)").append(`${evDT}     ${evKH}`);
-        $("#table1 td:eq(2)").append(`${votesDT}   ${votesKH}`);
 
-        for(var i=0;i<data.length;i=i+2)
+        totalVotes = votesDT + votesKH;
+        var percentDT = Math.round((votesDT/totalVotes)*100)
+        var percentKH = Math.round((votesKH/totalVotes)*100)
+        // $("#table1 td:eq(0)").append(`${data[0].candidate_name}    ${data[1].candidate_name}`);
+
+
+        // $("#table1 td:eq(1)").append(`${evDT}     ${evKH}`);
+
+
+        // $("#table1 td:eq(2)").append(`${votesDT}(${percentDT}%)   ${votesKH}(${percentKH}%)`);
+
+        $("#table1 td:eq(0)").html(`
+            <div style="display: flex; justify-content: space-between;">
+                <span>${data[0].candidate_name}</span>
+                <span>${data[1].candidate_name}</span>
+            </div>
+        `);
+        $("#table1 td:eq(1)").html(`
+            <div style="display: flex; justify-content: space-between;">
+                <span>${evDT}</span>
+                <span>${evKH}</span>
+            </div>
+        `);
+        $("#table1 td:eq(2)").html(`
+            <div style="display: flex; justify-content: space-between;">
+                <span>${votesDT} (${percentDT}%)</span>
+                <span>${votesKH} (${percentKH}%)</span>
+            </div>
+        `);
+
+
+
+        console.log(data);
+        console.log(states);
+        for(var i=0;i<states.length;i++)
         {
-            `
-            <tr>
-            <td>${data[i].state_name} (${data[i].state_abbrv})</td>
-            <td>${states[i].ev}</td>
-            <td></td>
-            </tr>
-            `
+            tableOutput += `<tr >`
+            if(data[i*2].votes> data[i*2+1].votes)
+            {
+                tableOutput += `<td style="background-color:#D32F2F">${states[i].name} (${states[i].abbr})</td>
+            <td style="background-color:#D32F2F">${states[i].ev}</td>
+            <td style="background-color:#D32F2F">${data[i*2].candidate_name}</td>
+            </tr>`;
+
+            }
+            else
+            {
+                tableOutput += `<td style="background-color:#0a53e4">${states[i].name} (${states[i].abbr})</td>
+            <td style="background-color:#0a53e4">${states[i].ev}</td>
+            <td style="background-color:#0a53e4">${data[i*2+1].candidate_name}</td>
+            </tr>`;
+            
+            }
+            tableOutput += `</tr>`
         }
+        $("#tbody").append(`${tableOutput}`);
 
 	});	
 }
@@ -47,8 +90,6 @@ function getResultData() {
 function getStateData() {
 	$.getJSON("http://localhost:3000/states", function(data){
         states = data;
-
+        getResultData();
 	});	
-    console.log(states);
-    getResultData();
 }

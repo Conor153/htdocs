@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "usElection"
+		},
+		{
+			"path": "a2"
+		},
+		{
+			"path": "express/6nationsdb"
+		},
+		{
+			"path": "express/chatapp"
+		},
+		{
+			"path": "express/6nations"
+		},
+		{
+			"path": "rwc2023"
+		},
+		{
+			"path": "nodejs/mysqlmusic"
+		}
+	],
+	"settings": {}
+}
