@@ -35,7 +35,7 @@ $(`document`).ready(function () {
 });
 
 function getJsonData() {
-	$.getJSON("http://localhost:3000/states/", function(data){
+	$.getJSON("http://localhost:3000/states", function(data){
 		states = data;
         DisplayData(data);	
 

@@ -57,8 +57,8 @@ app.get("/results/:year?", function(req,res){
 	resultData.getResults(req,res);
 });
 
-app.get("/updateResults/:abbrv?/:votes?/:votes?", function(req,res){
-	resultData.getResults(req,res);
+app.post("/updateResults", function(req,res){
+	resultData.UpdateResults(req,res);
 });
 
 

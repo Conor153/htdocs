@@ -8,6 +8,7 @@ $(`document`).ready(function () {
 function getResultData() {
 	$.getJSON("http://localhost:3000/results/2024", function(data){
         var totalVotes=0;
+        var totalEV = 0;
         var votesDT=0;
         var votesKH=0;
         var evDT=0;
@@ -30,32 +31,17 @@ function getResultData() {
         totalVotes = votesDT + votesKH;
         var percentDT = Math.round((votesDT/totalVotes)*100)
         var percentKH = Math.round((votesKH/totalVotes)*100)
-        // $("#table1 td:eq(0)").append(`${data[0].candidate_name}    ${data[1].candidate_name}`);
+        totalEV = evDT + evKH;
+        var evPercent = Math.round((evDT/totalEV)*100)
+        
+        $("#table1 td:eq(0)").append(`${data[0].candidate_name}<span style="float: right">${data[1].candidate_name}</span>`);
 
-
-        // $("#table1 td:eq(1)").append(`${evDT}     ${evKH}`);
-
-
-        // $("#table1 td:eq(2)").append(`${votesDT}(${percentDT}%)   ${votesKH}(${percentKH}%)`);
-
-        $("#table1 td:eq(0)").html(`
-            <div style="display: flex; justify-content: space-between;">
-                <span>${data[0].candidate_name}</span>
-                <span>${data[1].candidate_name}</span>
-            </div>
-        `);
-        $("#table1 td:eq(1)").html(`
-            <div style="display: flex; justify-content: space-between;">
-                <span>${evDT}</span>
-                <span>${evKH}</span>
-            </div>
-        `);
-        $("#table1 td:eq(2)").html(`
-            <div style="display: flex; justify-content: space-between;">
-                <span>${votesDT} (${percentDT}%)</span>
-                <span>${votesKH} (${percentKH}%)</span>
-            </div>
-        `);
+        //Text Colour WHITE
+        //His email to find rgb #
+        $("#table1 td:eq(1)").attr(`style`,`background-image: linear-gradient(to right, #D32F2F 0%, #D32F2F ${evPercent}%, #0a53e4 ${evPercent}%, #0a53e4 100%)`);
+        $("#table1 td:eq(1)").append(`<span>${evDT}</span><span style="float: right">${evKH}</span>`);
+        $("#table1 td:eq(2)").attr(`style`,`background-image: linear-gradient(to right, #D32F2F 0%, #D32F2F ${percentDT}%, #0a53e4 51%, #0a53e4 100%)`);
+        $("#table1 td:eq(2)").append(`<span>${votesDT} (${percentDT}%)</span><span style="float: right">${votesKH} (${percentKH}%)</span>`);
 
 
 
