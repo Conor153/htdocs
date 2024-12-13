@@ -31,10 +31,6 @@ exports.UpdateResults = function(req,res){
 	var abbr= req.body.abbr;
 	var votes = req.body.votes;
 	var candidate_name = req.body.name;
-	console.log(abbr);
-	console.log(votes);
-	console.log(candidate_name);
-
 	connection.query(`UPDATE pres_votes SET votes = ${votes} WHERE state_abbr = '${abbr}' AND candidate_name  = '${candidate_name}' AND year = 2024`, function(err, rows, fields) {
 	  if (err) throw err;
 	
