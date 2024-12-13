@@ -20,12 +20,12 @@ function getJsonData() {
             if(data[i].votes>data[i+1].votes)
             {
                 tableOutput += `<tr>
-                        <td style="background-color:#D32F2F">(${data[i].candidate_party.charAt(0)})`
+                        <td style="background-color:#D61C1C">(${data[i].candidate_party.charAt(0)})`
             }
             else
             {
                 tableOutput += `<tr>
-                    <td style="background-color:#0a53e4">(${data[i+1].candidate_party.charAt(0)})`
+                    <td style="background-color:#263FE0">(${data[i+1].candidate_party.charAt(0)})`
                         
                     
             }

@@ -18,7 +18,7 @@ function nav() {
     <a href ="resultsEV2024.html">EV Results 2024</a>
     </li> | 
     <li class="nav-item">
-    <a href ="usMap.html">Results Map </a>
+    <a href ="resultMap.html">Results Map </a>
     </li> |`;
     if (sessionStorage.getItem("login") == "true") {
         navOutPut += `

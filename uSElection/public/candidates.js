@@ -6,7 +6,6 @@ $(`document`).ready(function () {
 
 function getJsonData() {
 	$.getJSON(`http://localhost:3000/candidates`, function(data){
-		console.log(data);
 		$.each(data, function(i, value){
 			const candidateImageFile = value.candidate_name.split(" ");
 			$(`#tbody`).append(
