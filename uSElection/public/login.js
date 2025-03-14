@@ -6,7 +6,10 @@ $(`document`).ready(function () {
     $("#login").click(function () {
         var email = $("#email").val();
         var password = $("#password").val();
-        $.post(`http://localhost:3000/login/${email}/${password}`, function (data) {  
+        alert("before post")
+        $.post(`http://localhost:3000/login/${email}/${password}`, function (data) {
+            alert(data + "after post")
+            console.log(data);    
         if (data.length == 0) 
             {
                 $("table thead tr:eq(1)").after(`

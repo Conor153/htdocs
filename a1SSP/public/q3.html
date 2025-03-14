@@ -1,0 +1,61 @@
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid;
+    padding: 4px;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+input {
+    background-color: #D3D3D3;    
+}
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/q3.js"></script>
+</head>
+
+<body>
+
+<a href="q1.html">Q1</a> | 
+<a href="q2.html">Q2</a> | 
+<a href="q3.html">Q3</a> | 
+<a href="quotes.html">Q4</a> | 
+<hr>
+<h1>Question 3 - Companies</h1>
+
+<h3>Add</h3>
+<table>
+<thead>
+    <tr>
+        <th>Name</th>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td><input id="name" type="text" /></td>
+        <td><button id="addButton">Add</button></td>     
+    </tr>
+</tbody>
+</table>
+
+
+
+<hr>
+<h3>View</h3>
+<table>
+<thead>
+    <tr>
+        <th>Name</th>
+        <th></th>
+    </tr>
+</thead>
+<tbody id="tbody">
+</tbody>
+</table>
+
+
+</body>
+</html>

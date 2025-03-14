@@ -1,0 +1,48 @@
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid;
+    padding: 4px;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+input {
+    background-color: #D3D3D3;    
+}
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/q2.js"></script>
+</head>
+
+<body>
+
+<a href="q1.html">Q1</a> | 
+<a href="q2.html">Q2</a> | 
+<a href="q3.html">Q3</a> | 
+<a href="quotes.html">Q4</a> | 
+<hr>
+<h1>Question 2 - Users</h1>
+
+<label for="rank">User <b>Rank</b> [<=<span id="rankValue">10</span>]:</label>
+<input type="range" id="rank" min="1" max="10" value="10">
+
+<hr>
+<table>
+<thead>
+    <tr>
+        <th>Rank</th>
+        <th>Name [username]</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Company</th>
+    </tr>
+</thead>
+<tbody id="tbody">
+</tbody>
+</table>
+
+
+</body>
+</html>

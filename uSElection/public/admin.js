@@ -26,6 +26,12 @@ function getJsonData(year) {
             let nameDT = $(`#DT`).text();
             let nameKH = $(`#KH`).text();
 
+            console.log("Button clicked for state: " + stateAbbr);
+            console.log("Candidate 1 Votes: " + votesDT);
+            console.log("Candidate 2 Votes: " + votesKH);
+            console.log("Candidate 1 Name: " + nameDT);
+            console.log("Candidate 2 Name: " + nameKH);
+
             $.post(`http://localhost:3000/updateResults`, {
                 abbr: stateAbbr,
                 votes: votesDT,

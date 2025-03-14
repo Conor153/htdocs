@@ -15,6 +15,9 @@ function getResultData() {
         var evKH=0;
         var tableOutput=``;
 
+
+        console.log(states);
+
         for(var j=0;j<states.length;j++)
         {
             votesDT += data[j*2].votes;
@@ -30,35 +33,36 @@ function getResultData() {
         var percentKH = Math.round((votesKH/totalVotes)*100)
         totalEV = evDT + evKH;
         var evPercent = Math.round((evDT/totalEV)*100)
-
-        votesDT = votesDT.toLocaleString();
-        votesKH = votesKH.toLocaleString();
         
         $("#table1 td:eq(0)").append(`${data[0].candidate_name}<span style="float: right">${data[1].candidate_name}</span>`);
-        $("#table1 td:eq(1)").attr(`style`,`background-image: linear-gradient(to right, #D61C1C 0%, #D61C1C ${evPercent}%, #263FE0 ${evPercent}%, #263FE0 100%)`);
-        $("#table1 td:eq(1)").css(`color`, `white` );
+
+        //Text Colour WHITE
+        //His email to find rgb #
+        $("#table1 td:eq(1)").attr(`style`,`background-image: linear-gradient(to right, #D32F2F 0%, #D32F2F ${evPercent}%, #0a53e4 ${evPercent}%, #0a53e4 100%)`);
         $("#table1 td:eq(1)").append(`<span>${evDT}</span><span style="float: right">${evKH}</span>`);
-        $("#table1 td:eq(2)").attr(`style`,`background-image: linear-gradient(to right, #D61C1C 0%, #D61C1C ${percentDT}%, #263FE0 51%, #263FE0 100%)`);
-        $("#table1 td:eq(2)").css(`color`, `white` );
+        $("#table1 td:eq(2)").attr(`style`,`background-image: linear-gradient(to right, #D32F2F 0%, #D32F2F ${percentDT}%, #0a53e4 51%, #0a53e4 100%)`);
         $("#table1 td:eq(2)").append(`<span>${votesDT} (${percentDT}%)</span><span style="float: right">${votesKH} (${percentKH}%)</span>`);
 
 
+
+        console.log(data);
+        console.log(states);
         for(var i=0;i<states.length;i++)
         {
             tableOutput += `<tr >`
             if(data[i*2].votes> data[i*2+1].votes)
             {
-                tableOutput += `<td style="background-color:#D61C1C">${states[i].name} (${states[i].abbr})</td>
-            <td style="background-color:#D61C1C">${states[i].ev}</td>
-            <td style="background-color:#D61C1C">${data[i*2].candidate_name}</td>
+                tableOutput += `<td style="background-color:#D32F2F">${states[i].name} (${states[i].abbr})</td>
+            <td style="background-color:#D32F2F">${states[i].ev}</td>
+            <td style="background-color:#D32F2F">${data[i*2].candidate_name}</td>
             </tr>`;
 
             }
             else
             {
-                tableOutput += `<td style="background-color:#263FE0">${states[i].name} (${states[i].abbr})</td>
-            <td style="background-color:#263FE0">${states[i].ev}</td>
-            <td style="background-color:#263FE0">${data[i*2+1].candidate_name}</td>
+                tableOutput += `<td style="background-color:#0a53e4">${states[i].name} (${states[i].abbr})</td>
+            <td style="background-color:#0a53e4">${states[i].ev}</td>
+            <td style="background-color:#0a53e4">${data[i*2+1].candidate_name}</td>
             </tr>`;
             
             }

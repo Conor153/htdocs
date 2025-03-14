@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 var cors = require("cors");
 
 var teams = require('./model/teams');
-var resultData = require("./model/results");
+var resultData = require("./results.json");
 
 var app = express();
 app.use(cors());
