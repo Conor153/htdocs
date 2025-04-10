@@ -2,6 +2,7 @@ window.onload = function(){
 	var data = [100, 200, 300, 400, 500, 400, 300, 200, 100];	
 	var spacing = 10;
     var barwidth = 50;
+	var margin = {left:25, right:25, top:5, bottom:25};
 	var height = d3.select("svg").attr("height");
 	var width = d3.select("svg").attr("width");
 

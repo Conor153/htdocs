@@ -1,65 +1,82 @@
 // var data = [{"x":100,"y":100},{"x":200, "y":200},{"x":300,"y":300},{"x":400, "y":200}];
-var data = [{x:100,y:100},{x:200, y:200},{x:300,y:300},{x:400, y:200}];
+var data = [
+  { x: 100, y: 100 },
+  { x: 200, y: 200 },
+  { x: 300, y: 300 },
+  { x: 400, y: 200 },
+];
 var spacing = 100;
 
-
-var padding=10;
+var padding = 10;
 var radius = 6;
 var height = 400;
 var width = 500;
 
-window.onload = function()
-{
-	var svg = d3.select("body").append("svg")
-    .attr("width" ,width)
+window.onload = function () {
+  var svg = d3
+    .select("body")
+    .append("svg")
+    .attr("width", width)
     .attr("height", height);
-	
-    var maximum = Maximum(data);
+
+  var y = d3
+    .scaleLinear()
+    .domain([0, MaximumY(data)])
+    .range([height-20, 20]);
+  var yAxis = d3.axisLeft(y);
+
+  var x = d3
+    .scaleLinear()
+    .domain([0, MaximumX(data)])
+    .range([0, width-80]);
+  var xAxis = d3.axisBottom(x);
+
+  var line = d3.line()
+    .x(d => x(d.x))
+    .y(d => y(d.y));
 
 
-        svg.append("line")
-		.attr("x1",0)
-        .attr("y1",0)
-        .attr("x2",0)
-        .attr("y2",maximum)
-		.attr("stroke","black")
-        .attr("stroke-width",2);
 
-        svg.append("line")
-        .attr("x1",0)
-        .attr("y1",maximum)
-        .attr("x2",height)
-        .attr("y2",maximum)
-        .attr("stroke-width",2)
-        .attr("stroke","black");
+  var chartGroup = svg.append("g").attr("transform", "translate(40, 0)");
 
-        var line = d3.line().x(function(d){
-                return d.x; }
-            )
-            .y(function(d) {
-                return maximum-d.y+padding; })
+  chartGroup.selectAll("circle")
+    .data(data)
+    .enter()
+    .append("circle")
+    .attr("cy", function (d) {
+      return y(d.y)
+    })
+    .attr("cx", function (d) {
+      return x(d.x);
 
-        svg.append("path")
-        .attr("d", line(data))
-        .attr("stroke", "red")
-        .attr("fill", "white");
+    })
+    .attr("r", radius)
+    .attr("fill", "steelblue");
 
-        var elements = svg.selectAll("circle")
-        .data(data);
-    console.log(elements);
-	
-    elements.enter().append("circle")
-        .attr("cy",function(d){return (maximum-d.y)+padding})
-        .attr("cx",function(d){return d.x;})
-        .attr("r",radius)
-        .attr("fill","steelblue");
-        
+
+  svg
+    .append("path")
+    .attr("d", line(data))
+    .attr("stroke", "red")
+    .attr("fill", "none")
+    .attr("transform", "translate(40, 0)");
+
+  svg.append("g")
+    .attr("transform", "translate(40, 0)")
+    .call(yAxis);
+
+  svg.append("g")
+    .attr("transform", `translate(40, ${height - 20})`)
+    .call(xAxis);
+
+};
+
+
+
+function MaximumY(dataset) {
+  return Math.max(...dataset.map((d) => d.y));
 }
 
-
-function Maximum(dataset)
-{
-    return Math.max(...dataset.map(d => d.y))
+function MaximumX(dataset) {
+  return Math.max(...dataset.map((d) => d.x));
 }
-
-

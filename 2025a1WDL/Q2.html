@@ -1,0 +1,35 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.7/underscore-umd-min.js"></script>
+    <script src="js/Q2.js"></script>
+</head>
+
+<body>
+<a href="Q1.html">Q1</a> |
+<a href="Q2.html">Q2</a> |
+<a href="Q3.html">Q3</a> |
+<a href="Q4.html">Q4</a> 
+<hr>
+
+<h2>Q2 - Daily Average & <span style="color: steelblue;">Max</span> Wind Speed</h2>
+JSON Data for sites coming from <a href="http://localhost/2025a1wdl/json/sites.json">here</a>.  JSON Data for site weather coming from <a href="http://localhost/2025a1wdl/json/weatherdata.json">here</a><br>
+<hr>
+<svg id="chart" width="700" height="410"></svg>
+<hr>
+Site: 
+<select id="sites">
+</select>
+<hr>
+Notes:
+<ul>    
+    <li>Chart shows max (steelblue) and avg (black) temperatures</li>
+    <li>Get working for N13 Grianan Of Aileach first!</li>
+    <li>Only attempt dropdown after you get N13 Grianan Of Aileach</li>
+    <li>bar width = 18</li>
+    <li>You can use <i>scale</i> variable to scale bar height</li>
+    <li>41 is max. wind speed for this dataset</li>
+</ul>
+</body>
+</html>

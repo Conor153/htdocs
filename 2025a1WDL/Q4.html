@@ -1,0 +1,42 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.7/underscore-umd-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/Q4.js"></script>
+    <style>
+        #map { 
+            width: 600px; 
+            height: 400px;
+        }     
+        </style>
+</head>
+
+<body>
+<a href="Q1.html">Q1</a> |
+<a href="Q2.html">Q2</a> |
+<a href="Q3.html">Q3</a> |
+<a href="Q4.html">Q4</a> 
+<hr>
+
+<h2>Q4 - Weather Data Table</h2>
+Use <a href="http://localhost/2025a1wdl/sql/weatherDB.sql">this database</a>. JSON Data for site weather coming from the database via this Express Route: <a href="http://localhost:3000/weather">/weather</a><br>
+<hr>
+Avg. Air Temperature <= <span id="aTemp">12</span> <input id="atempSlider" type="range" min="-1" max="12" value="12">
+<hr>
+<table border="1">
+<thead>
+<th>Date</th>
+<th>Site</th>
+<th><span style="color: rgb(0, 13, 252)">Avg. Air Temperature</span></th>
+<th>Avg. Wind Speed</th>
+<th>Wind Bearing</th>
+</thead>
+<tbody id="tbody">
+</tbody>
+</table>
+<hr>
+</body>
+</html>

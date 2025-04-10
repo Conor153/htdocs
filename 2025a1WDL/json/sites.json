@@ -1,0 +1,35 @@
+{
+	"sites": 
+	[
+		{
+			"site_name": "N13 Grianan Of Aileach",
+			"lat": "55.043",
+			"lng": "-7.40632"
+		},
+		{
+			"site_name": "N15 Bundoran",
+			"lat": "54.4673",
+			"lng": "-8.33233"
+		},
+		{
+			"site_name": "N15 Kilygordon",
+			"lat": "54.7979",
+			"lng": "-7.67736"
+		},
+		{
+			"site_name": "N15 Lough Mourne",
+			"lat": "54.7543",
+			"lng": "-7.90757"
+		},
+		{
+			"site_name": "N56 Ardara",
+			"lat": "54.6944",
+			"lng": "-8.40307"
+		},
+		{
+			"site_name": "N56 Gweedore",
+			"lat": "55.0453",
+			"lng": "-8.17753"
+		}
+	]
+}

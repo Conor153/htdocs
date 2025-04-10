@@ -11,9 +11,9 @@ $(document).ready(function() {
                               .attr("height",height)
 							  .attr("style","background: lightgrey");
 
-		var w = d3.scaleLinear()
-		.domain([0,maximum])
-		.range([0,600]);
+	var w = d3.scaleLinear()
+	.domain([0,maximum])
+	.range([0,600]);
 
 	var elements = svg.selectAll("rect")
 		.data(data);

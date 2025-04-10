@@ -10,7 +10,7 @@ $(document).ready(function() {
                        .data(dataset);
                        
     var w = d3.scaleLinear()
-              .domain([0,300])
+              .domain([0,Maximum(dataset)])
               .range([0,600]); 
 
     elements.enter().append("rect")
@@ -20,3 +20,8 @@ $(document).ready(function() {
                      .attr("height",50)
                      .attr("fill","steelblue");
   });
+
+  function Maximum(dataset)
+{
+    return Math.max(...dataset.map(d => d))
+}

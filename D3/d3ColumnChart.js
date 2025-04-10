@@ -36,3 +36,8 @@ window.onload = function() {
     .attr("fill","white");
 
 }
+
+function Maximum(dataset)
+{
+    return Math.max(...dataset.map(d => d))
+}

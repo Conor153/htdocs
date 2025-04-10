@@ -1,0 +1,368 @@
+{
+    "weatherdata": 
+    [
+		{
+			"date": "2023-02-17",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "9",
+			"avgAirTemperature": "10",
+			"maxAirTemperature": "11",
+			"minWindSpeed": "3",
+			"avgWindSpeed": "12",
+			"maxWindSpeed": "18",
+			"windDirectionBearing": "227"
+		},
+		{
+			"date": "2023-02-18",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "7",
+			"avgAirTemperature": "9",
+			"maxAirTemperature": "10",
+			"minWindSpeed": "12",
+			"avgWindSpeed": "20",
+			"maxWindSpeed": "28",
+			"windDirectionBearing": "283"
+		},
+		{
+			"date": "2023-02-19",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "9",
+			"avgAirTemperature": "11",
+			"maxAirTemperature": "12",
+			"minWindSpeed": "12",
+			"avgWindSpeed": "15",
+			"maxWindSpeed": "19",
+			"windDirectionBearing": "245"
+		},
+		{
+			"date": "2023-02-20",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "10",
+			"avgAirTemperature": "11",
+			"maxAirTemperature": "12",
+			"minWindSpeed": "10",
+			"avgWindSpeed": "12",
+			"maxWindSpeed": "18",
+			"windDirectionBearing": "246"
+		},
+		{
+			"date": "2023-02-21",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "6",
+			"avgAirTemperature": "9",
+			"maxAirTemperature": "12",
+			"minWindSpeed": "5",
+			"avgWindSpeed": "15",
+			"maxWindSpeed": "20",
+			"windDirectionBearing": "246"
+		},
+		{
+			"date": "2023-02-22",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "4",
+			"avgAirTemperature": "6",
+			"maxAirTemperature": "7",
+			"minWindSpeed": "6",
+			"avgWindSpeed": "14",
+			"maxWindSpeed": "24",
+			"windDirectionBearing": "212"
+		},
+		{
+			"date": "2023-02-23",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "2",
+			"avgAirTemperature": "6",
+			"maxAirTemperature": "8",
+			"minWindSpeed": "4",
+			"avgWindSpeed": "10",
+			"maxWindSpeed": "17",
+			"windDirectionBearing": "225"
+		},
+		{
+			"date": "2023-02-24",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "5",
+			"avgAirTemperature": "8",
+			"maxAirTemperature": "10",
+			"minWindSpeed": "2",
+			"avgWindSpeed": "13",
+			"maxWindSpeed": "20",
+			"windDirectionBearing": "115"
+		},
+		{
+			"date": "2023-02-25",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "1",
+			"avgAirTemperature": "5",
+			"maxAirTemperature": "8",
+			"minWindSpeed": "2",
+			"avgWindSpeed": "6",
+			"maxWindSpeed": "10",
+			"windDirectionBearing": "115"
+		},
+		{
+			"date": "2023-02-26",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "1",
+			"avgAirTemperature": "4",
+			"maxAirTemperature": "9",
+			"minWindSpeed": "2",
+			"avgWindSpeed": "6",
+			"maxWindSpeed": "10",
+			"windDirectionBearing": "135"
+		},
+		{
+			"date": "2023-02-27",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "2",
+			"avgAirTemperature": "5",
+			"maxAirTemperature": "7",
+			"minWindSpeed": "2",
+			"avgWindSpeed": "6",
+			"maxWindSpeed": "10",
+			"windDirectionBearing": "141"
+		},
+		{
+			"date": "2023-02-28",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "4",
+			"avgAirTemperature": "6",
+			"maxAirTemperature": "7",
+			"minWindSpeed": "3",
+			"avgWindSpeed": "8",
+			"maxWindSpeed": "12",
+			"windDirectionBearing": "82"
+		},
+		{
+			"date": "2023-03-01",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "5",
+			"avgAirTemperature": "6",
+			"maxAirTemperature": "7",
+			"minWindSpeed": "2",
+			"avgWindSpeed": "6",
+			"maxWindSpeed": "10",
+			"windDirectionBearing": "97"
+		},
+		{
+			"date": "2023-03-02",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "4",
+			"avgAirTemperature": "6",
+			"maxAirTemperature": "7",
+			"minWindSpeed": "2",
+			"avgWindSpeed": "5",
+			"maxWindSpeed": "8",
+			"windDirectionBearing": "117"
+		},
+		{
+			"date": "2023-03-03",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "5",
+			"avgAirTemperature": "6",
+			"maxAirTemperature": "7",
+			"minWindSpeed": "1",
+			"avgWindSpeed": "4",
+			"maxWindSpeed": "6",
+			"windDirectionBearing": "110"
+		},
+		{
+			"date": "2023-03-04",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "4",
+			"avgAirTemperature": "5",
+			"maxAirTemperature": "7",
+			"minWindSpeed": "1",
+			"avgWindSpeed": "4",
+			"maxWindSpeed": "10",
+			"windDirectionBearing": "245"
+		},
+		{
+			"date": "2023-03-05",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "4",
+			"avgAirTemperature": "7",
+			"maxAirTemperature": "9",
+			"minWindSpeed": "2",
+			"avgWindSpeed": "12",
+			"maxWindSpeed": "18",
+			"windDirectionBearing": "296"
+		},
+		{
+			"date": "2023-03-06",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "2",
+			"avgAirTemperature": "4",
+			"maxAirTemperature": "6",
+			"minWindSpeed": "3",
+			"avgWindSpeed": "9",
+			"maxWindSpeed": "15",
+			"windDirectionBearing": "109"
+		},
+		{
+			"date": "2023-03-07",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "-2",
+			"avgAirTemperature": "2",
+			"maxAirTemperature": "5",
+			"minWindSpeed": "2",
+			"avgWindSpeed": "5",
+			"maxWindSpeed": "10",
+			"windDirectionBearing": "99"
+		},
+		{
+			"date": "2023-03-08",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "-4",
+			"avgAirTemperature": "1",
+			"maxAirTemperature": "6",
+			"minWindSpeed": "2",
+			"avgWindSpeed": "8",
+			"maxWindSpeed": "15",
+			"windDirectionBearing": "118"
+		},
+		{
+			"date": "2023-03-09",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "-0",
+			"avgAirTemperature": "1",
+			"maxAirTemperature": "3",
+			"minWindSpeed": "4",
+			"avgWindSpeed": "21",
+			"maxWindSpeed": "28",
+			"windDirectionBearing": "81"
+		},
+		{
+			"date": "2023-03-10",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "-3",
+			"avgAirTemperature": "3",
+			"maxAirTemperature": "7",
+			"minWindSpeed": "4",
+			"avgWindSpeed": "5",
+			"maxWindSpeed": "7",
+			"windDirectionBearing": "185"
+		},
+		{
+			"date": "2023-03-11",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "2",
+			"avgAirTemperature": "6",
+			"maxAirTemperature": "9",
+			"minWindSpeed": "6",
+			"avgWindSpeed": "12",
+			"maxWindSpeed": "16",
+			"windDirectionBearing": "200"
+		},
+		{
+			"date": "2023-03-12",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "8",
+			"avgAirTemperature": "10",
+			"maxAirTemperature": "12",
+			"minWindSpeed": "6",
+			"avgWindSpeed": "13",
+			"maxWindSpeed": "23",
+			"windDirectionBearing": "209"
+		},
+		{
+			"date": "2023-03-13",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "2",
+			"avgAirTemperature": "7",
+			"maxAirTemperature": "12",
+			"minWindSpeed": "9",
+			"avgWindSpeed": "20",
+			"maxWindSpeed": "30",
+			"windDirectionBearing": "227"
+		},
+		{
+			"date": "2023-03-14",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "-0",
+			"avgAirTemperature": "4",
+			"maxAirTemperature": "7",
+			"minWindSpeed": "4",
+			"avgWindSpeed": "13",
+			"maxWindSpeed": "28",
+			"windDirectionBearing": "260"
+		},
+		{
+			"date": "2023-03-15",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "2",
+			"avgAirTemperature": "8",
+			"maxAirTemperature": "11",
+			"minWindSpeed": "6",
+			"avgWindSpeed": "16",
+			"maxWindSpeed": "22",
+			"windDirectionBearing": "173"
+		},
+		{
+			"date": "2023-03-16",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "9",
+			"avgAirTemperature": "12",
+			"maxAirTemperature": "15",
+			"minWindSpeed": "5",
+			"avgWindSpeed": "12",
+			"maxWindSpeed": "19",
+			"windDirectionBearing": "203"
+		},
+		{
+			"date": "2023-03-17",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "9",
+			"avgAirTemperature": "11",
+			"maxAirTemperature": "13",
+			"minWindSpeed": "2",
+			"avgWindSpeed": "9",
+			"maxWindSpeed": "19",
+			"windDirectionBearing": "160"
+		},
+		{
+			"date": "2023-03-18",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "6",
+			"avgAirTemperature": "8",
+			"maxAirTemperature": "10",
+			"minWindSpeed": "2",
+			"avgWindSpeed": "21",
+			"maxWindSpeed": "32",
+			"windDirectionBearing": "304"
+		},
+		{
+			"date": "2023-03-19",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "6",
+			"avgAirTemperature": "8",
+			"maxAirTemperature": "12",
+			"minWindSpeed": "6",
+			"avgWindSpeed": "14",
+			"maxWindSpeed": "23",
+			"windDirectionBearing": "218"
+		},
+		{
+			"date": "2023-03-20",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "11",
+			"avgAirTemperature": "12",
+			"maxAirTemperature": "14",
+			"minWindSpeed": "8",
+			"avgWindSpeed": "14",
+			"maxWindSpeed": "18",
+			"windDirectionBearing": "195"
+		},
+		{
+			"date": "2023-03-21",
+			"site_name": "N15 Bundoran",
+			"minAirTemperature": "8",
+			"avgAirTemperature": "10",
+			"maxAirTemperature": "10",
+			"minWindSpeed": "6",
+			"avgWindSpeed": "9",
+			"maxWindSpeed": "13",
+			"windDirectionBearing": "214"
+		}
+	]
+}
